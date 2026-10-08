@@ -1,5 +1,7 @@
 # mezunSU
 
+https://demirklc.github.io/mezunSU/
+
 Sabancı Üniversitesi müfredatına göre ders ve mezuniyet planlama aracı. Resmi mezuniyet onayı vermez; kesin durum SUIS Degree Evaluation üzerinden kontrol edilmelidir.
 
 Hesap açılmaz. Dersler, durumları ve planlanan dönemler yalnızca kullanıcının tarayıcısında saklanır. Tarayıcı veya cihaz değiştirirken JSON yedeği indirin ve yeni cihazda geri yükleyin. Site adresi değişirse eski adreste yedek almanız gerekir. Gizli gezinme veya tarayıcı verilerini temizlemek kayıtları silebilir.
