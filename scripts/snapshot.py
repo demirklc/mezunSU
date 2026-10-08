@@ -4,6 +4,8 @@ from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 import suis
+# Four program jobs, two pool requests each: at most eight concurrent SUIS requests.
+suis.ThreadPoolExecutor=lambda max_workers: ThreadPoolExecutor(max_workers=2)
 ROOT=Path('site/data')
 ALIASES={'CS 210':'DSA 210','PROJ 102':'PROJ 201'}
 def read(path,default):
