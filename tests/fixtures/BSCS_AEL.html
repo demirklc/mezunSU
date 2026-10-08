@@ -1,0 +1,839 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-87158618-4"></script>
+<script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag("js", new Date());
+        
+         gtag("config", "UA-87158618-4");
+        </script>
+<style type="text/css">
+        <!--
+          BODY {    MARGIN: 0px; COLOR: #4b5065; FONT-FAMILY: Arial, Helvetica, Tahoma; BACKGROUND-COLOR: #ffffff}
+          A    {    FONT-SIZE: 10px; COLOR: #4b5065; LINE-HEIGHT: normal; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif}
+          H1   {    PADDING-RIGHT: 5px; MARGIN-TOP: 6px; PADDING-LEFT: 5px; FONT-SIZE: 10px; MARGIN-BOTTOM: 6px; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: top; COLOR: #bb6458; LINE-HEIGHT: normal; PADDING-TOP: 0px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif}
+          H2   {    PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 10px; PADDING-BOTTOM: 5px; VERTICAL-ALIGN: top; COLOR: #bb6458; LINE-HEIGHT: normal; PADDING-TOP: 5px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif}
+          H3   {    PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 10px; PADDING-BOTTOM: 5px; VERTICAL-ALIGN: top; COLOR: #4b5065; LINE-HEIGHT: normal; PADDING-TOP: 5px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif}
+          H4   {    PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 10px; PADDING-BOTTOM: 5px; VERTICAL-ALIGN: top; COLOR: #4b5065; LINE-HEIGHT: normal; PADDING-TOP: 5px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif}
+          H5   {    PADDING-RIGHT: 5px; MARGIN-TOP: 6px; PADDING-LEFT: 5px; FONT-SIZE: 10px; MARGIN-BOTTOM: 6px; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: top; COLOR: #bb6458; LINE-HEIGHT: normal; PADDING-TOP: 0px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif}
+          P    {    PADDING-RIGHT: 5px; MARGIN-TOP: 6px; PADDING-LEFT: 5px; FONT-SIZE: 10px; MARGIN-BOTTOM: 6px; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: top; COLOR: #4d4d4d; LINE-HEIGHT: normal; PADDING-TOP: 0px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif}
+          BLOCKQUOTE {    PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 10px; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: top; COLOR: #4d4d4d; LINE-HEIGHT: normal; MARGIN-RIGHT: 0px; PADDING-TOP: 0px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left}
+          PRE  {    PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 10px; PADDING-BOTTOM: 5px; VERTICAL-ALIGN: top; COLOR: #4d4d4d; LINE-HEIGHT: normal; PADDING-TOP: 5px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left}
+          UL   {    PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 10px; PADDING-BOTTOM: 5px; MARGIN-LEFT: 10px; VERTICAL-ALIGN: top; COLOR: #4d4d4d; LINE-HEIGHT: normal; PADDING-TOP: 5px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left}
+          OL   {    PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 10px; PADDING-BOTTOM: 5px; MARGIN-LEFT: 15px; VERTICAL-ALIGN: top; COLOR: #4d4d4d; LINE-HEIGHT: normal; PADDING-TOP: 5px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left}
+          LI   {    PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 10px; PADDING-BOTTOM: 5px; MARGIN-LEFT: 20px; COLOR: #4d4d4d; LINE-HEIGHT: normal; PADDING-TOP: 5px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left}
+          DL   {    PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 10px; PADDING-BOTTOM: 5px; VERTICAL-ALIGN: top; COLOR: #4b5065; LINE-HEIGHT: normal; PADDING-TOP: 5px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left}
+          DT   {    PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 10px; PADDING-BOTTOM: 5px; VERTICAL-ALIGN: top; COLOR: #4b5065; LINE-HEIGHT: normal; PADDING-TOP: 5px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left}
+          DD   {    PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 10px; PADDING-BOTTOM: 5px; VERTICAL-ALIGN: top; COLOR: #4b5065; LINE-HEIGHT: normal; PADDING-TOP: 5px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left}
+          TH   {    FONT-SIZE: 10px; LINE-HEIGHT: normal; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif}
+          TD   {    FONT-SIZE: 10px; LINE-HEIGHT: normal; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif}
+          TABLE    {    }
+          P.none   {    PADDING-RIGHT: 4px; PADDING-LEFT: 4px; FONT-SIZE: 10px; PADDING-BOTTOM: 4px; MARGIN: 0px; COLOR: #4b5065; PADDING-TOP: 4px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif}
+          .nobold  {    FONT-WEIGHT: normal}
+          P.haber  {    MARGIN-TOP: 3pt; FONT-WEIGHT: bold; FONT-SIZE: 10px; MARGIN-BOTTOM: 3pt; COLOR: #4b5065; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif}
+          A.haber  {    MARGIN-TOP: 3pt; FONT-WEIGHT: bold; FONT-SIZE: 10px; MARGIN-BOTTOM: 3pt; COLOR: #4b5065; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none}
+          A.haber1 {    MARGIN-TOP: 0pt; FONT-WEIGHT: bold; FONT-SIZE: 10px; MARGIN-BOTTOM: 0pt; COLOR: #4b5065; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none}
+          P.haber1 {    MARGIN-TOP: 9px; MARGIN-BOTTOM: 9px}
+          A.SolMenu {    PADDING-RIGHT: 0px; MARGIN-TOP: 0px; PADDING-LEFT: 0px; FONT-SIZE: 9px; MARGIN-BOTTOM: 0px; PADDING-BOTTOM: 0px; COLOR: white; PADDING-TOP: 0px; FONT-FAMILY: Arial; TEXT-DECORATION: none}
+          A.SagMenu {    PADDING-RIGHT: 0px; MARGIN-TOP: 0px; PADDING-LEFT: 0px; FONT-SIZE: 9px; MARGIN-BOTTOM: 0px; PADDING-BOTTOM: 0px; COLOR: black; PADDING-TOP: 0px; FONT-FAMILY: Arial; TEXT-DECORATION: none}
+          SPAN.SagMenu  {    PADDING-RIGHT: 0px; MARGIN-TOP: 0px; PADDING-LEFT: 0px; FONT-SIZE: 9px; MARGIN-BOTTOM: 0px; PADDING-BOTTOM: 0px; COLOR: black; PADDING-TOP: 0px; FONT-FAMILY: Arial; TEXT-DECORATION: none}
+          P.SagMenu     {    PADDING-RIGHT: 5px; MARGIN-TOP: 0px; PADDING-LEFT: 5px; FONT-SIZE: 9px; MARGIN-BOTTOM: 0px; PADDING-BOTTOM: 5px; COLOR: black; PADDING-TOP: 5px; FONT-FAMILY: Arial}
+          P.sayfabaslik {    PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 10px; MARGIN-BOTTOM: 0px; PADDING-BOTTOM: 5px; VERTICAL-ALIGN: top; COLOR: #bb6458; LINE-HEIGHT: normal; PADDING-TOP: 5px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif}
+          .darli        {    PADDING-RIGHT: 0px; MARGIN-TOP: 0px; PADDING-LEFT: 0px; MARGIN-BOTTOM: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px }        
+        -->
+        </style>
+</head>
+<body>
+<table>
+<tr>
+<td colspan="5"><a href="SU_DEGREE.p_degree_detail?P_TERM=201901&amp;P_PROGRAM=BSCS&amp;P_SUBMIT=A&amp;P_LANG=TUR&amp;P_LEVEL=UG" style="text-decoration:none"><h1>BİLGİSAYAR BİLİMİ VE MÜHENDİSLİĞİ LİSANS PROGRAMI (BSCS)</h1></a></td>
+</tr>
+<tr>
+<td colspan="4">Area Electives</td>
+</tr>
+<br/>
+<thead>
+<tr>
+<th> </th>
+<th>Ders</th>
+<th>Ders Adı</th>
+<th>AKTS Kredisi</th>
+<th>SU Kredisi</th>
+<th>Fakülte</th>
+</tr>
+</thead>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=BIO&amp;crse_numb=48006&amp;lang=tur">BIO 48006</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=BIO&amp;crse_numb=48006&amp;lang=tur">BIO’da Özel Konular: Gen Regülasyonu ve Hastalıklar</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=409&amp;lang=tur">CS 409</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=409&amp;lang=tur">Sayısal Analiz</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=414&amp;lang=tur">CS 414</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=414&amp;lang=tur">Ağ Bilimi</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=415&amp;lang=tur">CS 415</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=415&amp;lang=tur">Derin öğrenmeye giriş</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=435&amp;lang=tur">CS 435</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=435&amp;lang=tur">Kuantum Programlama I</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=438&amp;lang=tur">CS 438</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=438&amp;lang=tur">&gt;Blok Zinciri: Güvenlik ve Uygulamaları</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=440&amp;lang=tur">CS 440</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=440&amp;lang=tur">&gt;Kuantum Programlama II</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=442&amp;lang=tur">CS 442</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=442&amp;lang=tur">Yazılım Tasarım Desenleri</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=447&amp;lang=tur">CS 447</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=447&amp;lang=tur">Immersif Sistemler Gelistirme</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=450&amp;lang=tur">CS 450</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=450&amp;lang=tur">Sanat ve Bilişim</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=455&amp;lang=tur">CS 455</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=455&amp;lang=tur">Büyük Dil Modelleri: Kuramsal Temeller ve Pratik Uygulamalar</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=48000&amp;lang=tur">CS 48000</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=48000&amp;lang=tur">CS’de Özel Konular: Yazılım Tasarım Desenleri</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=48001&amp;lang=tur">CS 48001</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=48001&amp;lang=tur">CS’de Özel Konular: Blok Zinciri: Güvenlik ve Uygulamaları</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=48002&amp;lang=tur">CS 48002</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=48002&amp;lang=tur">CS’de Özel Konular: Ağ Bilimi</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=48003&amp;lang=tur">CS 48003</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=48003&amp;lang=tur">CS’de Özel Konular: Paralel Bilgisayar Mimarileri</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=48004&amp;lang=tur">CS 48004</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=48004&amp;lang=tur">CS’de Özel Konular: Çevik Yazılım Geliştirme</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=48006&amp;lang=tur">CS 48006</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=48006&amp;lang=tur">CS’de Özel Konular: Merkeziyetsiz Finans</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=48007&amp;lang=tur">CS 48007</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=48007&amp;lang=tur">CS’de Özel Konular: Nesnelerin İnternetinde Algılama Sistemleri</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=48008&amp;lang=tur">CS 48008</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=48008&amp;lang=tur">CS’de Özel Konular: Kötü Amaçli Yazilim Analizi ve Tespit Etme</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=48010&amp;lang=tur">CS 48010</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=48010&amp;lang=tur"></a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=48011&amp;lang=tur">CS 48011</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=48011&amp;lang=tur">CS'de Özel Konular: Yapay Zeka için Evrim ve Biyoloji</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=48012&amp;lang=tur">CS 48012</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=48012&amp;lang=tur">CS'de Özel Konular: Agentik Yapay Zeka Sistemleri: Mimari ve Yaygınlaştırma</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=48013&amp;lang=tur">CS 48013</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=CS&amp;crse_numb=48013&amp;lang=tur">CS'de Özel Konular: İnsan Merkezli Yapay Zeka: Yöntemleri</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=DSA&amp;crse_numb=301&amp;lang=tur">DSA 301</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=DSA&amp;crse_numb=301&amp;lang=tur">Veri Görselleştirme</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=DSA&amp;crse_numb=428&amp;lang=tur">DSA 428</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=DSA&amp;crse_numb=428&amp;lang=tur">Büyük Veri İşleme</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=DSA&amp;crse_numb=440&amp;lang=tur">DSA 440</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=DSA&amp;crse_numb=440&amp;lang=tur">Veri ve Yapay Zeka Etiği</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=DSA&amp;crse_numb=473&amp;lang=tur">DSA 473</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=DSA&amp;crse_numb=473&amp;lang=tur">Zaman Serileri ve Tahmin Modelleri</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td><center> * </center></td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ECON&amp;crse_numb=201&amp;lang=tur">ECON 201</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ECON&amp;crse_numb=201&amp;lang=tur">Oyunlar ve Stratejiler</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>SSBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ECON&amp;crse_numb=435&amp;lang=tur">ECON 435</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ECON&amp;crse_numb=435&amp;lang=tur">Kesikli Tercih Yöntemleri</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>SSBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ECON&amp;crse_numb=488&amp;lang=tur">ECON 488</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ECON&amp;crse_numb=488&amp;lang=tur">Eşleşme ve Piyasalar</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>SSBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ECON&amp;crse_numb=494&amp;lang=tur">ECON 494</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ECON&amp;crse_numb=494&amp;lang=tur">Mekânsal Veriler Bilimi</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>SSBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ECON&amp;crse_numb=495&amp;lang=tur">ECON 495</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ECON&amp;crse_numb=495&amp;lang=tur">Makina Öğrenmesi ile Siyasa Değerlendirme</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>SSBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=200&amp;lang=tur">EE 200</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=200&amp;lang=tur">Elektronik Devre Uygulamaları</a></td>
+<td style="width:75px;text-align:center;">2</td>
+<td style="width:60px;text-align:center;">2</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=310&amp;lang=tur">EE 310</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=310&amp;lang=tur">Donanım Tanımlama Dilleri</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=312&amp;lang=tur">EE 312</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=312&amp;lang=tur">Kesikli-Zaman İşaret ve Sistemleri</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=410&amp;lang=tur">EE 410</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=410&amp;lang=tur">Enformasyon ve Kodlama Teorisi</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=413&amp;lang=tur">EE 413</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=413&amp;lang=tur">Telsiz Haberleşme</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=414&amp;lang=tur">EE 414</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=414&amp;lang=tur">Multimedya Komünikasyon</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=415&amp;lang=tur">EE 415</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=415&amp;lang=tur">Sayısal Konuşma ve Ses İşleme</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=419&amp;lang=tur">EE 419</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=419&amp;lang=tur">Sinyal İşleme Tasarım ve Uygulaması</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=423&amp;lang=tur">EE 423</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=423&amp;lang=tur">Gömülü Sistemler</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=426&amp;lang=tur">EE 426</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=426&amp;lang=tur">Heterojen Hesaplama ve Yonga-üzeri-Sistem</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=48008&amp;lang=tur">EE 48008</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=48008&amp;lang=tur">EE'de Özel Konular: Heterojen Hesaplama ve Yonga-üzeri-Sistem</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=48010&amp;lang=tur">EE 48010</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=48010&amp;lang=tur">EE'de Özel Konular: Beyin-Bilgisayar Arayüzleri</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=48011&amp;lang=tur">EE 48011</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=48011&amp;lang=tur">Güvenli ve Enerji Kısıtlı Entegre Biyoelektronik Sistemler</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=48012&amp;lang=tur">EE 48012</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=48012&amp;lang=tur">Elektrik-Elektronik Mühendisliğinde Özel Konular: Makine Öğrenmesinde Güvenlik, Gizlilik ve Dayanıklılık</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=48013&amp;lang=tur">EE 48013</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=EE&amp;crse_numb=48013&amp;lang=tur">EE'de Özel Konular: Yapay Zekâ için Donanım</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ENRG&amp;crse_numb=424&amp;lang=tur">ENRG 424</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ENRG&amp;crse_numb=424&amp;lang=tur">Pil Hücresi Tasarimi, Modellemesi ve Batarya Paketi Gelistirmesi</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ENRG&amp;crse_numb=426&amp;lang=tur">ENRG 426</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ENRG&amp;crse_numb=426&amp;lang=tur">Batarya Yönetim Sistemleri</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td><center> * </center></td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ENS&amp;crse_numb=203&amp;lang=tur">ENS 203</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ENS&amp;crse_numb=203&amp;lang=tur">Elektronik Devreler I</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td><center> * </center></td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ENS&amp;crse_numb=208&amp;lang=tur">ENS 208</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ENS&amp;crse_numb=208&amp;lang=tur">Endüstri Mühendisliğine Giriş</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td><center> * </center></td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ENS&amp;crse_numb=216&amp;lang=tur">ENS 216</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ENS&amp;crse_numb=216&amp;lang=tur">Bilişim Sistemleri: Tarihsel Perspektif</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ENS&amp;crse_numb=311&amp;lang=tur">ENS 311</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ENS&amp;crse_numb=311&amp;lang=tur">Numerik Analiz</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ENS&amp;crse_numb=409&amp;lang=tur">ENS 409</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ENS&amp;crse_numb=409&amp;lang=tur">Sayısal Analiz</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ENS&amp;crse_numb=48014&amp;lang=tur">ENS 48014</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ENS&amp;crse_numb=48014&amp;lang=tur">Mühendislikte Özel Konular: Opto-Nano ve Mikro-Elektro-Mekanik ve Elektro-Kimyasal Sistemler</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=IE&amp;crse_numb=302&amp;lang=tur">IE 302</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=IE&amp;crse_numb=302&amp;lang=tur">Yöneylem Araştırmasında Stokastik Modeller</a></td>
+<td style="width:75px;text-align:center;">7</td>
+<td style="width:60px;text-align:center;">4</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=IE&amp;crse_numb=305&amp;lang=tur">IE 305</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=IE&amp;crse_numb=305&amp;lang=tur">Benzetim</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=IE&amp;crse_numb=311&amp;lang=tur">IE 311</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=IE&amp;crse_numb=311&amp;lang=tur">Yöneylem Araştırması I</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=IE&amp;crse_numb=313&amp;lang=tur">IE 313</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=IE&amp;crse_numb=313&amp;lang=tur">Yöneylem Araştırması III</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=IE&amp;crse_numb=404&amp;lang=tur">IE 404</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=IE&amp;crse_numb=404&amp;lang=tur">Dijital Dönüşüm</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=IE&amp;crse_numb=405&amp;lang=tur">IE 405</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=IE&amp;crse_numb=405&amp;lang=tur">Karar Analizi</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=IE&amp;crse_numb=409&amp;lang=tur">IE 409</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=IE&amp;crse_numb=409&amp;lang=tur">Proje Çizelgeleme ve Yönetimi</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=IE&amp;crse_numb=413&amp;lang=tur">IE 413</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=IE&amp;crse_numb=413&amp;lang=tur">Bilgi Sistemleri</a></td>
+<td style="width:75px;text-align:center;">5</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=IE&amp;crse_numb=436&amp;lang=tur">IE 436</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=IE&amp;crse_numb=436&amp;lang=tur">Finansta Monte Carlo Metotlari</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=IE&amp;crse_numb=451&amp;lang=tur">IE 451</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=IE&amp;crse_numb=451&amp;lang=tur">Veri Analitigi ve Optimizasyon</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=IF&amp;crse_numb=333&amp;lang=tur">IF 333</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=IF&amp;crse_numb=333&amp;lang=tur">Yaratıcılık, İnovasyon ve Girişimcilik</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=IF&amp;crse_numb=467&amp;lang=tur">IF 467</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=IF&amp;crse_numb=467&amp;lang=tur">Karar, Psikoloji ve Beyin</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td><center> * </center></td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=MATH&amp;crse_numb=202&amp;lang=tur">MATH 202</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=MATH&amp;crse_numb=202&amp;lang=tur">Diferansiyel Denklemler</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=MATH&amp;crse_numb=206&amp;lang=tur">MATH 206</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=MATH&amp;crse_numb=206&amp;lang=tur">Vektör Kalkulus</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=MATH&amp;crse_numb=301&amp;lang=tur">MATH 301</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=MATH&amp;crse_numb=301&amp;lang=tur">Matematiksel  Analize Giriş</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=MATH&amp;crse_numb=305&amp;lang=tur">MATH 305</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=MATH&amp;crse_numb=305&amp;lang=tur">Kompleks Kalkülüs</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=MATH&amp;crse_numb=311&amp;lang=tur">MATH 311</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=MATH&amp;crse_numb=311&amp;lang=tur">Cebire Giriş</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=MATH&amp;crse_numb=317&amp;lang=tur">MATH 317</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=MATH&amp;crse_numb=317&amp;lang=tur">Elementer Sayılar Teorisi</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=MATH&amp;crse_numb=318&amp;lang=tur">MATH 318</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=MATH&amp;crse_numb=318&amp;lang=tur">Kombinatoriğe Giriş</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=MATH&amp;crse_numb=414&amp;lang=tur">MATH 414</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=MATH&amp;crse_numb=414&amp;lang=tur">Sonlu Cisimler ve Uygulamaları I</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=MATH&amp;crse_numb=484&amp;lang=tur">MATH 484</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=MATH&amp;crse_numb=484&amp;lang=tur">Kuantum Algoritmalarına ve Post-Kuantum Kriptografiye Matematiksel Giriş</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=MAT&amp;crse_numb=306&amp;lang=tur">MAT 306</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=MAT&amp;crse_numb=306&amp;lang=tur">Nano-boyuttaki Malzemelerde Bilgisayar Teknikleri</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ME&amp;crse_numb=407&amp;lang=tur">ME 407</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ME&amp;crse_numb=407&amp;lang=tur">Atanmış Bilgisayarlı Sistemler</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ME&amp;crse_numb=435&amp;lang=tur">ME 435</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=ME&amp;crse_numb=435&amp;lang=tur">Mühendislik Sistemelerinde Ölçekleme</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=MGMT&amp;crse_numb=203&amp;lang=tur">MGMT 203</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=MGMT&amp;crse_numb=203&amp;lang=tur">İşletmede Veri Analizi ve Araştırmaya Giriş</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>YBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=NS&amp;crse_numb=213&amp;lang=tur">NS 213</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=NS&amp;crse_numb=213&amp;lang=tur">Doğa Bilimleri ve Mühendislik için Temel Fizik Kavramları</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=OPIM&amp;crse_numb=302&amp;lang=tur">OPIM 302</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=OPIM&amp;crse_numb=302&amp;lang=tur">Yönetim Bilişim Sistemleri</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>YBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=OPIM&amp;crse_numb=390&amp;lang=tur">OPIM 390</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=OPIM&amp;crse_numb=390&amp;lang=tur">İş Analitiğine Giriş</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>YBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=OPIM&amp;crse_numb=402&amp;lang=tur">OPIM 402</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=OPIM&amp;crse_numb=402&amp;lang=tur">İş Analitiğinde Optimizasyon Modellemesi</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>YBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=OPIM&amp;crse_numb=404&amp;lang=tur">OPIM 404</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=OPIM&amp;crse_numb=404&amp;lang=tur">İş Süreçleri Analiz ve Tasarımı</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>YBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=OPIM&amp;crse_numb=405&amp;lang=tur">OPIM 405</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=OPIM&amp;crse_numb=405&amp;lang=tur">Yönetim Karar Destek Sistemleri</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>YBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=OPIM&amp;crse_numb=406&amp;lang=tur">OPIM 406</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=OPIM&amp;crse_numb=406&amp;lang=tur">Mekansal Zeka ile Müşteri İlişkileri Yönetimi</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>YBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=OPIM&amp;crse_numb=407&amp;lang=tur">OPIM 407</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=OPIM&amp;crse_numb=407&amp;lang=tur">Uygulamalı İş Analitiği</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>YBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=OPIM&amp;crse_numb=408&amp;lang=tur">OPIM 408</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=OPIM&amp;crse_numb=408&amp;lang=tur">Perakende Operasyonları ve Analitiği</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>YBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=OPIM&amp;crse_numb=409&amp;lang=tur">OPIM 409</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=OPIM&amp;crse_numb=409&amp;lang=tur">Proje Yönetimi</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>YBF</td>
+</tr>
+<tr>
+<td><center> * </center></td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=PHYS&amp;crse_numb=113&amp;lang=tur">PHYS 113</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=PHYS&amp;crse_numb=113&amp;lang=tur">Doğa Bilimleri ve Mühendislik için Temel Fizik Kavramları</a></td>
+<td style="width:75px;text-align:center;">7</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=PHYS&amp;crse_numb=484&amp;lang=tur">PHYS 484</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=PHYS&amp;crse_numb=484&amp;lang=tur">Kuvantum Hesaplama ve Kuvantum Bilişi</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>MDBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=VA&amp;crse_numb=310&amp;lang=tur">VA 310</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=VA&amp;crse_numb=310&amp;lang=tur">Mültimedyaya Giris</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>SSBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=VA&amp;crse_numb=325&amp;lang=tur">VA 325</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=VA&amp;crse_numb=325&amp;lang=tur">Arayüz Tasarımı</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>SSBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=VA&amp;crse_numb=345&amp;lang=tur">VA 345</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=VA&amp;crse_numb=345&amp;lang=tur">Yaratıcı Kodlama</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>SSBF</td>
+</tr>
+<tr>
+<td>    </td>
+<td nowrap="nowrap"><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=VA&amp;crse_numb=455&amp;lang=tur">VA 455</a></td>
+<td><a href="sabanci_www.p_get_courses?levl_code=UG&amp;subj_code=VA&amp;crse_numb=455&amp;lang=tur">Fiziksel Etkileşim</a></td>
+<td style="width:75px;text-align:center;">6</td>
+<td style="width:60px;text-align:center;">3</td>
+<td>SSBF</td>
+</tr>
+</table>
+<b><p>* Fakülte Dersleri</p></b>
+</body>
+</html>

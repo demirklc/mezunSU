@@ -1,0 +1,10 @@
+__pycache__/
+.pytest_cache/
+.venv/
+.env
+.env.*
+data/
+*.sqlite3
+*.sqlite3-*
+*.db
+*-yedek*.json
