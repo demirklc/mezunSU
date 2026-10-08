@@ -1,0 +1,99 @@
+name: Update SUIS and publish Pages
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '20 3 * * *'
+  push:
+    branches: [main]
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: pages-release
+  cancel-in-progress: false
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    outputs:
+      programs: ${{ steps.programs.outputs.programs }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: pip install requests beautifulsoup4
+      - id: programs
+        run: echo "programs=$(python scripts/snapshot.py discover)" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: metadata
+          path: site/data
+  curriculum:
+    needs: discover
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        program: ${{ fromJSON(needs.discover.outputs.programs) }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read last successful snapshots
+        run: |
+          if git fetch origin snapshots; then git checkout FETCH_HEAD -- site/data; fi
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: pip install requests beautifulsoup4
+      - run: python scripts/snapshot.py program --program "${{ matrix.program }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: curriculum-${{ matrix.program }}
+          path: |
+            site/data/curriculum/${{ matrix.program }}
+            site/data/terms/${{ matrix.program }}.json
+            site/data/status/${{ matrix.program }}.json
+  publish:
+    needs: [discover, curriculum]
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read last successful snapshots
+        run: |
+          if git fetch origin snapshots; then git checkout FETCH_HEAD -- site/data; fi
+      - uses: actions/download-artifact@v4
+        with:
+          path: site/data
+          merge-multiple: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: pip install requests beautifulsoup4
+      - run: python scripts/snapshot.py credits
+      - name: Assemble static website
+        run: |
+          cp static/index.html site/index.html
+          mkdir -p site/static
+          cp static/*.js static/*.png site/static/
+          touch site/.nojekyll
+      - name: Preserve verified public snapshots
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git checkout --orphan snapshot-output
+          git rm --cached -r .
+          git add site/data
+          git commit -m "Update public SUIS snapshots"
+          git push origin HEAD:snapshots --force
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4
