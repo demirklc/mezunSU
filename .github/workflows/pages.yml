@@ -83,7 +83,7 @@ jobs:
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git checkout --orphan snapshot-output
-          git rm --cached -r .
+          git rm --cached -rf .
           git add site/data
           git commit -m "Update public SUIS snapshots"
           git push origin HEAD:snapshots --force
@@ -93,3 +93,4 @@ jobs:
           path: site
       - id: deployment
         uses: actions/deploy-pages@v4
+
