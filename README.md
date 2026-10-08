@@ -16,16 +16,6 @@ pip install -r requirements.txt
 uvicorn main:app --host 127.0.0.1 --port 8787
 ```
 
-## GitHub ve Render üzerinden yayınlama
-
-1. GitHub'da yeni bir repository oluşturun. Bu klasörün içeriğini yükleyin; eski kurulumun veritabanını veya kişisel JSON yedeklerini yüklemeyin. `.gitignore` gizli ve yerel dosyaları dışarıda tutar.
-2. Render hesabında **New → Blueprint** seçin, GitHub repository'sini bağlayın. `render.yaml` ücretsiz web hizmetini tanımlar.
-3. Oluşan HTTPS adresinde müfredat, ders ekleme, yedekleme ve geri yüklemeyi kontrol edin.
-
-GitHub Pages Python sunucusunu çalıştırmaz. GitHub kaynak kodunu, Render çalışan uygulamayı barındırır. Render ücretsiz hizmeti boşta kaldığında uyuyabilir; ilk açılış gecikebilir. Ücretsiz sunucunun dosyaları yeniden başlatmada silinebilir: yalnızca ortak SUIS önbelleği yeniden hazırlanır, kullanıcıların tarayıcıdaki kayıtları etkilenmez. Kalıcı disk kullanırsanız `CACHE_DIR` yolunu ona yönlendirebilirsiniz.
-
-Kaynaklar: [Render FastAPI](https://render.com/docs/deploy-fastapi), [ücretsiz hizmet sınırları](https://render.com/docs/free).
-
 ## Kontroller
 ```sh
 python -m pytest -q
