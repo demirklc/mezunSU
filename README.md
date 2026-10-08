@@ -1,4 +1,4 @@
-# mezunSU · İlk yayın sürümü
+# mezunSU
 
 Sabancı Üniversitesi müfredatına göre ders ve mezuniyet planlama aracı. Resmi mezuniyet onayı vermez; kesin durum SUIS Degree Evaluation üzerinden kontrol edilmelidir.
 
