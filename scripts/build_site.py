@@ -10,5 +10,7 @@ def build():
     shutil.copy2(ROOT/'static/index.html',site/'index.html')
     for pattern in ('*.js','*.png'):
         for path in (ROOT/'static').glob(pattern):shutil.copy2(path,site/'static'/path.name)
+    shutil.copy2(ROOT/'static/rehber.html',site/'rehber.html')
+    (site/'sitemap.xml').write_text('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://demirklc.github.io/mezunSU/</loc></url><url><loc>https://demirklc.github.io/mezunSU/rehber.html</loc></url></urlset>',encoding='utf-8')
     (site/'.nojekyll').touch()
 if __name__=='__main__':build()
