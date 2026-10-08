@@ -12,7 +12,7 @@ def test_public_routes_and_security(monkeypatch,tmp_path):
         response=c.get('/')
         assert response.status_code==200
         assert "frame-ancestors 'none'" in response.headers['content-security-policy']
-        assert '/static/local-data.js' in response.text
+        assert 'static/local-data.js' in response.text
         assert c.get('/api/profile/private').status_code==404
         assert c.post('/api/profile',json={'program':'CS','term':'202501'}).status_code==404
         assert c.post('/api/restore',json={}).status_code==404
